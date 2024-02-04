@@ -52,22 +52,23 @@ async function searchMovies() {
                 const movieCard = document.createElement('div');
                 movieCard.classList.add('movie-card');
                 movieCard.innerHTML = `
-                   <div class="m-5 w-60 overflow-hidden overflow-hidden transition-transform duration-300 transform-gpu hover:scale-105 ">
+                   <div class="m-5 w-60 h-[550]  flex flex-col   ">
                         <img class="w-60 " src="${IMG_PATH}${movie.poster_path}" alt="${movie.title}">
-                        <h3 class="text-white  text-wrap text-3xl">${movie.title}</h3>
+                     
                         <p class="text-sm text-gray-600">${movie.release_date}</p>
-                        <button onclick="displayMovieDetails('${movie.id}')" class="btn-details mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">View Details</button>
+                        <button onclick="displayMovieDetails('${movie.id}')" class="btn-details  items-end mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">View Details</button>
                          
                     </div>
                          
-                            <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-                            <div class="bg-white  rounded-md p-6">
+                        <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+                            <div class="bg-white  w-2/5 rounded-md p-6">
                                 <h2 id="modalTitle" class="text-xl font-bold mb-2"></h2>
                                 <p id="modalOverview"></p>
                                 <p id="modalReleaseDate" class="mt-2"></p>
                                 <p id="modalVoteAverage"></p>
                                 <button onclick="closeModal()" class="btn-close mt-4 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:bg-red-600">Close</button>
                             </div>
+                        </div>
                       
            
                      
