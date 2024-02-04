@@ -52,7 +52,7 @@ async function searchMovies() {
                 const movieCard = document.createElement('div');
                 movieCard.classList.add('movie-card');
                 movieCard.innerHTML = `
-                   <div class="m-5 w-60 overflow-hidden ">
+                   <div class="m-5 w-60 overflow-hidden overflow-hidden transition-transform duration-300 transform-gpu hover:scale-105 ">
                         <img class="w-60 " src="${IMG_PATH}${movie.poster_path}" alt="${movie.title}">
                         <h3 class="text-white  text-wrap text-3xl">${movie.title}</h3>
                         <p class="text-sm text-gray-600">${movie.release_date}</p>
