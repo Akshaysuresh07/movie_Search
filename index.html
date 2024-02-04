@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<body >
+   <div class=" w-full h-full bg-slate-950">
+        
+        <div class="container flex justify-end">
+       
+                <a href="#"><h1 class="text-4xl text-white  mr-auto ml-36  mt-10"><span class="text-red-500">D</span>MOVIE </h1></a>
+         
+            <input type="text" id="searchInput" placeholder="search"  class="border-2 border-gray-200 mt-10    bg-gray-400 w-3/5 rounded-lg m-10 h-10" >
+            <button class="border-2 border-green-200 text-white    bg-green-700  mt-10  h-10 w-28 rounded-lg "  onclick="searchMovies()">Search</button>
+        </div>
+        <h2 class="text-yellow-600 text-xl text-center">Latest Movies</h2>
+        <div id="movieResults" class="flex  flex-wrap justify-center mt-4">
+            
+
+        </div>
+   </div>
+
+</body>
+<script src="app.js"></script>
+</html>
